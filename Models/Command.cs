@@ -1,6 +1,6 @@
 namespace CommandFinder.Models
 {
-    public class CommandFinder
+    public class Command
     {
         public int Id { get; set; }
         public string HowTo { get; set; }
