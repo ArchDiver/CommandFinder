@@ -13,7 +13,12 @@ namespace CommandFinder.Controllers
     [ApiController]
     public class CommandsController : ControllerBase
     {
-        private readonly MockCommandFinderRepo _repository = new MockCommandFinderRepo();
+        private readonly ICommandFinderRepo _repository;
+        public CommandsController(ICommandFinderRepo repository)
+        {
+            _repository = repository;
+        }
+        //private readonly MockCommandFinderRepo _repository = new MockCommandFinderRepo();
         // GET api/commands   -all of the commands
         [HttpGet]
         public ActionResult <IEnumerable<Command>> GetAllCommands()
