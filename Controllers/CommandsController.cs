@@ -7,9 +7,9 @@ namespace CommandFinder.Controllers
 {
     // //api/commands -dynamic
     // [Route("api/[controller]")]
+
     // api/commads -static
     [Route("api/commands")]
-
     [ApiController]
     public class CommandsController : ControllerBase
     {
